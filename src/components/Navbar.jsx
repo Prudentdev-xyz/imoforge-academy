@@ -27,7 +27,7 @@ export default function Navbar() {
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
-  
+
   return (
     <>
       <motion.nav
@@ -37,17 +37,17 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-[#C4BADF]/30"
-            : "bg-transparent"
+            : "bg-transparent border-b border-[#C4BADF]/30"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+       <div style={{ padding: "0 80px" }} className="w-full h-20 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Ìmòforge Academy"
-              className="h-10 w-10 object-contain rounded-full"
+              className="h-12 w-12 object-contain"
             />
-            <span className="text-[15px] font-medium tracking-wide text-[#3D2F6B] hidden sm:block">
+            <span className="text-[20px] font-semibold tracking-wide text-[#3D2F6B] hidden sm:block">
               Ìmòforge Academy
             </span>
           </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`text-[13.5px] font-medium tracking-wide transition-colors duration-200 relative group ${
+                  className={`text-[15px] font-medium tracking-wide transition-colors duration-200 relative group ${
                     active
                       ? "text-[#3D2F6B]"
                       : "text-[#0D0D0D]/60 hover:text-[#3D2F6B]"
@@ -81,7 +81,8 @@ export default function Navbar() {
               href="https://t.me/+BN_iOjD8s2BhZjZk"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center px-5 py-2.5 rounded-full text-[13px] font-medium tracking-wide bg-[#3D2F6B] text-white hover:bg-[#251C45] transition-all duration-300"
+              style={{ padding: "12px 32px" }}
+              className="hidden md:inline-flex items-center rounded-full text-[15px] font-semibold tracking-wide bg-[#3D2F6B] text-white hover:bg-[#251C45] transition-all duration-300"
             >
               Join Waitlist
             </a>

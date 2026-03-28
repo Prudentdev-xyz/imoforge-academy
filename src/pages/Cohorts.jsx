@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const cohorts = () => {
+export default function Cohorts() {
   return (
-    <div>cohorts</div>
+    <div>Cohorts</div>
   )
 }
