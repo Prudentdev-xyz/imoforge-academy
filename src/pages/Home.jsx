@@ -70,20 +70,6 @@ const vaultTopics = [
 export default function Home() {
   return (
     <main className="w-full">
-      {/* ── Announcement Banner ── */}
-      <div className="w-full bg-[#3D2F6B] text-white text-center py-3 px-4 text-[12.5px] tracking-wide font-medium">
-        <span className="opacity-60 mr-2">New </span>
-        Ìmòforge Gratia Vault — 2026 Edition ·{" "}
-        <a
-          href="https://imoforgeacademy.com/#workshop-details"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:opacity-80 transition-opacity"
-        >
-          Learn more
-        </a>
-      </div>
-
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20 overflow-hidden bg-[#F7F5FC]">
         {/* subtle background texture */}
@@ -147,29 +133,31 @@ export default function Home() {
             through hands-on, project-driven learning.
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={4}
-            className="flex flex-col sm:flex-row items-center gap-4 mt-2"
-          >
-            <a
-              href="https://t.me/+BN_iOjD8s2BhZjZk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#3D2F6B] text-white text-[13.5px] font-medium tracking-wide hover:bg-[#251C45] transition-all duration-300"
-            >
-              Join the Waitlist <ArrowRight size={15} />
-            </a>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-[#8B7DB5] text-[#3D2F6B] text-[13.5px] font-medium tracking-wide hover:bg-[#C4BADF]/20 transition-all duration-300"
-            >
-              View Curriculum <MoveRight size={15} />
-            </Link>
-          </motion.div>
+        {/* CTAs */}
+<motion.div
+  variants={fadeUp}
+  initial="hidden"
+  animate="show"
+  custom={4}
+  className="flex flex-col sm:flex-row items-center gap-4 mt-2"
+>
+  
+    <a href="https://t.me/+BN_iOjD8s2BhZjZk"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ padding: "14px 36px" }}
+    className="inline-flex items-center gap-2 rounded-full bg-[#3D2F6B] text-white text-[15px] font-semibold tracking-wide hover:bg-[#251C45] transition-all duration-300"
+  >
+    Join the Waitlist <ArrowRight size={16} />
+  </a>
+  <Link
+    to="/about"
+    style={{ padding: "14px 36px" }}
+    className="inline-flex items-center gap-2 rounded-full border border-[#8B7DB5] text-[#3D2F6B] text-[15px] font-semibold tracking-wide hover:bg-[#C4BADF]/20 transition-all duration-300"
+  >
+    View Curriculum <MoveRight size={16} />
+  </Link>
+</motion.div>
         </div>
 
         {/* scroll hint */}

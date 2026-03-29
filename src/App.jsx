@@ -9,6 +9,18 @@ import Connect from "./pages/Connect";
 export default function App() {
   return (
     <BrowserRouter>
+       <div className="w-full bg-[#3D2F6B] text-white text-center py-3 px-4 text-[12.5px] tracking-wide font-medium m-20">
+        <span className="opacity-60 mr-2">New </span>
+        Ìmòforge Gratia Vault — 2026 Edition ·{' '}
+        
+         <a href="https://imoforgeacademy.com/#workshop-details"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:opacity-80 transition-opacity"
+        >
+          Learn more
+        </a>
+      </div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
