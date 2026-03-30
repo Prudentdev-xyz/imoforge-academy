@@ -11,8 +11,8 @@ const socials = [
 const navigate = [
   { label: "Programs", to: "/cohorts" },
   { label: "About", to: "/about" },
-  { label: "Founder", to: "/about" },
-  { label: "Contact / Support", to: "/connect" },
+  { label: "Cohorts & Alumni", to: "/cohorts" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const W = { maxWidth: 1100, margin: "0 auto" };
