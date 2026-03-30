@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Cohorts & Alumni", to: "/cohorts" },
-  { label: "Connect", to: "/connect" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export default function Navbar() {
