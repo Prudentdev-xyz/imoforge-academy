@@ -100,41 +100,43 @@ export default function Navbar() {
           </div>
         </div>
       </motion.nav>
+<AnimatePresence>
+  {menuOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.25 }}
+      style={{ padding: "0 24px 32px 24px", margin: "8px 16px", borderRadius: 16 }}
+      className="z-40 bg-white shadow-lg flex flex-col md:hidden"
+    >
+      {navLinks.map((link) => (
+        <Link
+          key={link.to}
+          to={link.to}
+          style={{ padding: "18px 0" }}
+          className={`text-[15px] font-medium border-b border-[#C4BADF]/30 ${
+            location.pathname === link.to
+              ? "text-[#3D2F6B]"
+              : "text-[#0D0D0D]/60"
+          }`}
+        >
+          {link.label}
+        </Link>
+      ))}
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            className="w-full z-40 bg-white border-b border-[#C4BADF]/40 shadow-lg px-6 py-6 flex flex-col gap-5 md:hidden"
-          >
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`text-[15px] font-medium ${
-                  location.pathname === link.to
-                    ? "text-[#3D2F6B]"
-                    : "text-[#0D0D0D]/60"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            <a
-              href="https://t.me/+BN_iOjD8s2BhZjZk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-full text-[13px] font-medium bg-[#3D2F6B] text-white"
-            >
-              Join Waitlist
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      
+       <a href="https://t.me/+BN_iOjD8s2BhZjZk"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ padding: "14px 0", width: "70%", marginTop: 28, alignSelf: "center" }}
+        className="flex items-center justify-center rounded-full text-[15px] font-semibold tracking-wide bg-[#3D2F6B] text-white hover:bg-[#251C45] transition-all duration-300"
+      >
+        Join Waitlist
+      </a>
+    </motion.div>
+  )}
+</AnimatePresence>
     </>
   );
 }
