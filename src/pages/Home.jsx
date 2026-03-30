@@ -616,8 +616,8 @@ export default function Home() {
               rel="noopener noreferrer"
               style={{
                 padding: "14px 36px",
-                background: "#fff",
-                color: "#251C45",
+                background: "#0D0D0D",
+                color: "#fff",
                 borderRadius: 999,
                 fontSize: 13.5,
                 fontWeight: 500,
