@@ -561,8 +561,8 @@ export default function Home() {
                 style={{
                   padding: 24,
                   borderRadius: 12,
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(196,186,223,0.2)",
+                  background: "#fff",
                   display: "flex",
                   flexDirection: "column",
                   gap: 12,
@@ -571,7 +571,7 @@ export default function Home() {
                 <span
                   style={{
                     fontSize: 11,
-                    color: "rgba(196,186,223,0.5)",
+                    color: "#8B7DB5",
                     fontWeight: 500,
                     letterSpacing: "0.15em",
                   }}
@@ -583,7 +583,7 @@ export default function Home() {
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: 15,
                     fontWeight: 500,
-                    color: "rgba(255,255,255,0.9)",
+                    color: "#251C45",
                     margin: 0,
                   }}
                 >
@@ -593,7 +593,7 @@ export default function Home() {
                   style={{
                     fontSize: 12.5,
                     lineHeight: 1.75,
-                    color: "rgba(255,255,255,0.45)",
+                    color: "rgba(13,13,13,0.6)",
                     fontWeight: 300,
                     margin: 0,
                   }}
