@@ -13,15 +13,8 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -31,15 +24,24 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-10 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-[#C4BADF]/30"
-            : "bg-transparent border-b border-[#C4BADF]/30"
-        }`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+        className="relative w-full z-50 bg-white border-b border-[#C4BADF]/30"
       >
+        <div className="w-full bg-[#3D2F6B] text-white text-center py-3 px-4 text-[12.5px] tracking-wide font-medium m-20">
+          <span className="opacity-60 mr-2">New </span>
+          Ìmòforge Gratia Vault — 2026 Edition ·{" "}
+          <a
+            href="https://imoforgeacademy.com/#workshop-details"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:opacity-80 transition-opacity"
+          >
+            Learn more
+          </a>
+        </div>
+
         <div
           style={{ padding: "0 80px" }}
           className="w-full h-20 flex items-center justify-between"
@@ -106,7 +108,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="fixed top-20 left-0 right-0 z-40 bg-white border-b border-[#C4BADF]/40 shadow-lg px-6 py-6 flex flex-col gap-5 md:hidden"
+            className="w-full z-40 bg-white border-b border-[#C4BADF]/40 shadow-lg px-6 py-6 flex flex-col gap-5 md:hidden"
           >
             {navLinks.map((link) => (
               <Link
@@ -121,6 +123,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+
             <a
               href="https://t.me/+BN_iOjD8s2BhZjZk"
               target="_blank"
