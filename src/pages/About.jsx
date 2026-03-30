@@ -25,7 +25,7 @@ const whyUs = [
   { title: "Learning by Building", desc: "We believe mastery comes from practice. Every learner builds real smart contracts, DeFi tools, dashboards, and trading systems." },
   { title: "Globally Connected, Locally Rooted", desc: "Our community spans Africa and beyond, connecting learners with builders, mentors, and innovators worldwide." },
   { title: "Support Beyond Graduation", desc: "We don't stop at teaching. Our alumni network opens doors to jobs, grants, collaborations, and long-term growth." },
-  { title: "Built for the Future of Web3", desc: "From blockchain engineering to data, security, and trading — our focus is on skills that remain relevant." },
+  { title: "Built for the Future of Web3", desc: "From blockchain engineering to data, security, and trading our focus is on skills that remain relevant." },
 ];
 
 const W = { maxWidth: 1100, margin: "0 auto" };
@@ -81,7 +81,7 @@ export default function About() {
               Our Mission
             </h2>
             <p style={{ fontSize: 15, lineHeight: 1.9, color: "rgba(13,13,13,0.6)", fontWeight: 300, margin: 0 }}>
-              To educate, mentor, and empower individuals through rigorous, project-driven programs that combine research, experimentation, and real-world building — while fostering a strong, values-driven community of global Web3 professionals.
+              To educate, mentor, and empower individuals through rigorous, project-driven programs that combine research, experimentation, and real-world building while fostering a strong, values-driven community of global Web3 professionals.
             </p>
           </motion.div>
         </div>
@@ -196,7 +196,7 @@ export default function About() {
                 Founder & CEO, Àkàńó Labs · Blockchain Data Analyst, DeFi Tool Developer, Trader, and Cybersecurity Student
               </p>
               <p style={{ fontSize: 15, lineHeight: 1.9, color: "rgba(255,255,255,0.6)", fontWeight: 300, margin: 0 }}>
-                Waliullahi is passionate about building technology, training, and connecting builders worldwide — empowering skilled individuals to shape the decentralized future.
+                Waliullahi is passionate about building technology, training, and connecting builders worldwide empowering skilled individuals to shape the decentralized future.
               </p>
               <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 300, color: "#C4BADF", fontStyle: "italic", margin: 0 }}>
                 "Skilled individuals and technology will transform the world."
